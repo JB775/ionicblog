@@ -1,12 +1,13 @@
 angular.module('starter.services', [])
 
 .factory('UserSession', function($resource) {
-  return $resource("http://localhost:3000/users/sign_in.json");
+  return $resource("https://ionicblogheroku.herokuapp.com/users/sign_in.json");
 })
 
 .factory('BlogEntry', function($resource) {
-  return $resource("http://localhost:3000/blog_entries/:id.json");
+  return $resource("https://ionicblogheroku.herokuapp.com/blog_entries/:id.json");
 })
+
 
 .factory('Chats', function() {
   // Might use a resource here that returns a JSON array
@@ -32,11 +33,6 @@ angular.module('starter.services', [])
     name: 'Perry Governor',
     lastText: 'Look at my mukluks!',
     face: 'https://pbs.twimg.com/profile_images/598205061232103424/3j5HUXMY.png'
-  }, {
-    id: 4,
-    name: 'Mike Harrington',
-    lastText: 'This is wicked good ice cream.',
-    face: 'https://pbs.twimg.com/profile_images/578237281384841216/R3ae1n61.png'
   }];
 
   return {
